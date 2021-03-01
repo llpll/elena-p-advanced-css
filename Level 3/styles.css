@@ -1,0 +1,83 @@
+body {
+  background-color: lightgray;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+}
+
+.social {
+  position: absolute;
+  top: 400px;
+  right: 0;
+}
+
+.social__btn {
+  color: white;
+  padding: 16px;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+}
+
+.social__btn--blog {
+  background-color: #e17b77;
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+
+.social__btn--blog::before {
+  content: "\f5fc";
+  margin-right: 25px;
+}
+
+.social__btn--blog::before__btn--blog:hover {
+  -webkit-transform: scale(width);
+          transform: scale(width);
+  width: 300px;
+}
+
+.social__btn--twitter {
+  background-color: #00aced;
+}
+
+.social__btn--twitter::before {
+  content: "\f099";
+  margin-right: 25px;
+}
+
+.social__btn--linkedin {
+  background-color: #007bb6;
+}
+
+.social__btn--linkedin::before {
+  content: "\f0e1";
+  margin-right: 25px;
+}
+
+.social__btn--facebook {
+  background-color: #3b5998;
+}
+
+.social__btn--facebook::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f007";
+  margin-right: 25px;
+}
+
+.social__btn--github {
+  background-color: #333;
+}
+
+.social__btn--github::before {
+  content: "\f0e1";
+  margin-right: 25px;
+}
+/*# sourceMappingURL=styles.css.map */

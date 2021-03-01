@@ -6,7 +6,7 @@ body {
 }
 
 .page {
-    max-width: 1200px;
+    min-width: 1200px;
     // margin: 60px auto;
     display: grid;
     grid-template-columns: repeat (8, 1fr);
@@ -66,7 +66,7 @@ body {
     }
 
     &__name {
-        text-transform: capitalize;
+        // text-transform: capitalize;
         font-size: 21px;
         font-weight: 500;
     }
@@ -92,6 +92,6 @@ body {
 @media (min-width: 1024px) {
     
     .card {
-        grid-column: 3/ span 4;
+        grid-column: span 4;
     }
 }
