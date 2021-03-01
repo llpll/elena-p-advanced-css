@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap);
+
+body {
+    background-color: #c3cfe2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.page {
+    max-width: 1200px;
+    font-weight: 300;
+    // margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: center;
+}
+
+
+.card {
+    // display: flex;
+    grid-column: span 8;
+    background-color: white;
+    border-radius: 25px;
+    min-width: 350px;
+    max-width: 400px;
+    margin: 20px;
+    justify-self: center;
+
+    &__text {
+        margin: 0;
+        padding: 30px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.7em;
+        margin-bottom: 90px;
+    }
+
+    &__footer {
+        background-color: #686de0;
+        color: fff;
+        border-radius: 0 0 25px 25px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        // position: absolute;
+        min-width: 300px;
+        max-width: 400px;
+        height: 220px;
+    }
+
+    &__img {
+        position: relative;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        border: 6px solid white;
+        align-self: flex-start;
+        // margin-bottom: 60px;
+        top: -80px;
+        // z-index: 99;
+    }
+
+    &__info {
+        color: white;
+        text-align: center;
+        align-self: flex-end;
+        padding: 30px;
+        position: relative;
+        top: -90px;
+    }
+
+    &__name {
+        text-transform: capitalize;
+        font-size: 21px;
+        font-weight: 500;
+    }
+
+    &__website {
+        opacity: 60%;
+        font-size: 21px;
+        font-weight: 500;
+    }
+}
+
+
+/* media queries */
+
+@media (min-width: 1024px) {
+    
+    .card {
+        grid-column: 3/ span 4;
+    }
+}
