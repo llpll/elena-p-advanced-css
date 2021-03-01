@@ -6,11 +6,10 @@ body {
 
 .page {
   max-width: 1200px;
-  font-weight: 300;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[8];
-      grid-template-columns: repeat(8, 1fr);
+  -ms-grid-columns: repeat 8, 1fr;
+      grid-template-columns: repeat 8, 1fr;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -50,16 +49,19 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   min-width: 300px;
   max-width: 400px;
   height: 220px;
 }
 
 .card__img {
-  position: relative;
+  position: absolute;
   border-radius: 50%;
   width: 140px;
   height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 6px solid white;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -72,8 +74,7 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   padding: 30px;
-  position: relative;
-  top: -90px;
+  position: absolute;
 }
 
 .card__name {
@@ -89,6 +90,13 @@ body {
 }
 
 /* media queries */
+@media (min-width: 400px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
+
 @media (min-width: 1024px) {
   .card {
     -ms-grid-column: 3;

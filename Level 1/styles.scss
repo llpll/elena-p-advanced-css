@@ -7,10 +7,9 @@ body {
 
 .page {
     max-width: 1200px;
-    font-weight: 300;
     // margin: 60px auto;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat (8, 1fr);
     justify-content: center;
 }
 
@@ -41,22 +40,21 @@ body {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        // position: absolute;
+        position: relative;
         min-width: 300px;
         max-width: 400px;
         height: 220px;
     }
 
     &__img {
-        position: relative;
+        position: absolute;
         border-radius: 50%;
         width: 140px;
         height: 140px;
+        object-fit: cover;
         border: 6px solid white;
         align-self: flex-start;
-        // margin-bottom: 60px;
         top: -80px;
-        // z-index: 99;
     }
 
     &__info {
@@ -64,8 +62,7 @@ body {
         text-align: center;
         align-self: flex-end;
         padding: 30px;
-        position: relative;
-        top: -90px;
+        position: absolute;
     }
 
     &__name {
@@ -83,6 +80,14 @@ body {
 
 
 /* media queries */
+
+@media (min-width: 400px) {
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+}
 
 @media (min-width: 1024px) {
     
