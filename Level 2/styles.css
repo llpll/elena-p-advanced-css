@@ -9,7 +9,6 @@ body {
 
 .grid {
   margin: 20px;
-  background-color: aqua;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: repeat 12, 1fr;
