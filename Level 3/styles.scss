@@ -1,5 +1,9 @@
 body {
     background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
 }
 
 .page {
@@ -8,12 +12,22 @@ body {
     position: relative;
 }
 
+@keyframes social-expand {
+from {transform: translateX(190px)}
+to {transform: translateX(0px)}
+}
+
+@keyframes social-collapse {
+    from {transform: translateX(0px)}
+    to {transform: translateX(210px)}
+    }
+
+
 .social {
-    // display: flex;
-    // flex-flow: row wrap;
-    // max-width: 400px;
-    // justify-content: flex-end;
-    position: absolute;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: flex-end;
+    position: fixed;
     top: 400px;
     right: 0;
 
@@ -21,61 +35,52 @@ body {
         color: white;
         padding: 16px;
         margin: 0;
-        width: 50px;
-        height: 50px;
+        width: 240px;
+        height: 30px;
+        display: grid;
+        grid-template-columns: 50px 190px;
+        align-content: center;
+        animation-name: social-collapse;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
     }
 
+    &__btn:hover {
+        animation-name: social-expand;
+        animation-duration: 0.6s;
+        animation-fill-mode: forwards;
+    }
+
+    &__icon {
+        width: 30px;
+        height: 30px;
+        align-self: center;
+    }
+
+    &__cta {
+        margin-left: 10px;
+        align-self: center;
+        grid-column: 2 / span 1;
+    }
+    
     &__btn--blog {
         background-color: #e17b77;
-        transition: width .35s ease-in-out;
     }
-
-    &__btn--blog::before {
-        content: "\f5fc";
-        margin-right: 25px;
-
-
-    &__btn--blog:hover {
-        transform: scale(width);
-        width: 300px;        
-    } 
-
-    } 
 
     &__btn--twitter {
         background-color: #00aced;
-    }
-
-    &__btn--twitter::before {
-        content: "\f099";
-        margin-right: 25px;
     }
 
     &__btn--linkedin {
         background-color: #007bb6;
     }
 
-    &__btn--linkedin::before {
-        content: "\f0e1";
-        margin-right: 25px;
-    }
-
-
     &__btn--facebook {
         background-color: #3b5998;
-    }
-
-    &__btn--facebook::before {
-        font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f007";
-        margin-right: 25px;
     }
 
     &__btn--github {
         background-color: #333;
     }   
 
-    &__btn--github::before {
-        content: "\f0e1";
-        margin-right: 25px;
-    }
 }

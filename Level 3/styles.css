@@ -1,5 +1,9 @@
 body {
   background-color: lightgray;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
 }
 
 .page {
@@ -12,8 +16,61 @@ body {
   position: relative;
 }
 
+@-webkit-keyframes social-expand {
+  from {
+    -webkit-transform: translateX(190px);
+            transform: translateX(190px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes social-expand {
+  from {
+    -webkit-transform: translateX(190px);
+            transform: translateX(190px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes social-collapse {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(210px);
+            transform: translateX(210px);
+  }
+}
+
+@keyframes social-collapse {
+  from {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  to {
+    -webkit-transform: translateX(210px);
+            transform: translateX(210px);
+  }
+}
+
 .social {
-  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  position: fixed;
   top: 400px;
   right: 0;
 }
@@ -22,62 +79,66 @@ body {
   color: white;
   padding: 16px;
   margin: 0;
-  width: 50px;
-  height: 50px;
+  width: 240px;
+  height: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50px 190px;
+      grid-template-columns: 50px 190px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-animation-name: social-collapse;
+          animation-name: social-collapse;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.social__btn:hover {
+  -webkit-animation-name: social-expand;
+          animation-name: social-expand;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.social__icon {
+  width: 30px;
+  height: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.social__cta {
+  margin-left: 10px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / span 1;
 }
 
 .social__btn--blog {
   background-color: #e17b77;
-  -webkit-transition: width .35s ease-in-out;
-  transition: width .35s ease-in-out;
-}
-
-.social__btn--blog::before {
-  content: "\f5fc";
-  margin-right: 25px;
-}
-
-.social__btn--blog::before__btn--blog:hover {
-  -webkit-transform: scale(width);
-          transform: scale(width);
-  width: 300px;
 }
 
 .social__btn--twitter {
   background-color: #00aced;
 }
 
-.social__btn--twitter::before {
-  content: "\f099";
-  margin-right: 25px;
-}
-
 .social__btn--linkedin {
   background-color: #007bb6;
-}
-
-.social__btn--linkedin::before {
-  content: "\f0e1";
-  margin-right: 25px;
 }
 
 .social__btn--facebook {
   background-color: #3b5998;
 }
 
-.social__btn--facebook::before {
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  content: "\f007";
-  margin-right: 25px;
-}
-
 .social__btn--github {
   background-color: #333;
-}
-
-.social__btn--github::before {
-  content: "\f0e1";
-  margin-right: 25px;
 }
 /*# sourceMappingURL=styles.css.map */
