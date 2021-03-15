@@ -5,7 +5,7 @@ body {
 }
 
 .page {
-  min-width: 1200px;
+  margin: 60px auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: repeat 8, 1fr;
@@ -16,7 +16,9 @@ body {
 }
 
 .card {
-  grid-column: span 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1 / span 8;
   background-color: white;
   border-radius: 25px;
   min-width: 350px;

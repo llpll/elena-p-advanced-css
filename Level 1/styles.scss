@@ -6,8 +6,7 @@ body {
 }
 
 .page {
-    min-width: 1200px;
-    // margin: 60px auto;
+    margin: 60px auto;
     display: grid;
     grid-template-columns: repeat (8, 1fr);
     justify-content: center;
@@ -15,8 +14,7 @@ body {
 
 
 .card {
-    // display: flex;
-    grid-column: span 8;
+    grid-column: 1 / span 8;
     background-color: white;
     border-radius: 25px;
     min-width: 350px;
@@ -66,7 +64,6 @@ body {
     }
 
     &__name {
-        // text-transform: capitalize;
         font-size: 21px;
         font-weight: 500;
     }
@@ -93,5 +90,6 @@ body {
     
     .card {
         grid-column: span 4;
+        // margin: 15px;
     }
 }
